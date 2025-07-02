@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fantast_6 - Impacture</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="files/styles/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style>
+      body {
+        font-family: "Manrope", "Noto Sans", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="home-container">
+    <div
+      class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden"
+    >
+      <header
+        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f2f2f2] px-10 py-3"
+      >
+        <div class="flex items-center gap-8">
+          <div class="flex items-center gap-4 text-[#141414]">
+            <div class="size-4">
+              <svg
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <h2
+              class="text-[#141414] text-lg font-bold leading-tight tracking-[-0.015em]"
+            >
+              Impacture
+            </h2>
+          </div>
+          <div class="flex items-center gap-9">
+            <a
+              class="text-[#141414] text-sm font-medium leading-normal"
+              href="index.html"
+              >Главная</a
+            >
+            <a
+              class="text-[#141414] text-sm font-medium leading-normal active"
+              href="student-page.html"
+              >Команды</a
+            >
+          </div>
+        </div>
+      </header>
+      <div class="flex-1">
+        <div class="layout-container">
+          <div class="px-40 flex flex-1 justify-center py-5">
+            <div
+              class="layout-content-container flex flex-col max-w-[960px] flex-1"
+            >
+              <div class="flex flex-wrap justify-between gap-3 p-4">
+                <p
+                  class="text-[#141414] tracking-light text-[32px] font-bold leading-tight min-w-72"
+                >
+                  Fantast_6
+                </p>
+              </div>
+              <div class="p-4 grid grid-cols-[20%_1fr] gap-x-6">
+                <div
+                  class="col-span-2 grid grid-cols-subgrid border-t border-t-[#e0e0e0] py-3"
+                >
+                  <p class="text-[#757575] text-xs font-normal leading-normal">
+                    Основано
+                  </p>
+                  <p class="text-[#141414] text-xs font-normal leading-normal">
+                    2025
+                  </p>
+                </div>
+                <div
+                  class="col-span-2 grid grid-cols-subgrid border-t border-t-[#e0e0e0] py-3"
+                >
+                  <p class="text-[#757575] text-xs font-normal leading-normal">
+                    Участники
+                  </p>
+                  <p class="text-[#141414] text-xs font-normal leading-normal">
+                    6
+                  </p>
+                </div>
+                <div
+                  class="col-span-2 grid grid-cols-subgrid border-t border-t-[#e0e0e0] py-3"
+                >
+                  <p class="text-[#757575] text-xs font-normal leading-normal">
+                    Город
+                  </p>
+                  <p class="text-[#141414] text-xs font-normal leading-normal">
+                    Астана
+                  </p>
+                </div>
+                <div
+                  class="col-span-2 grid grid-cols-subgrid border-t border-t-[#e0e0e0] py-3"
+                >
+                  <p class="text-[#757575] text-xs font-normal leading-normal">
+                    Школа/Университет
+                  </p>
+                  <p class="text-[#141414] text-xs font-normal leading-normal">
+                    РФМШ
+                  </p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-4 p-4">
+                <div
+                  id="teamCarousel"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="files/images/fantast_6/лого.webp"
+                        class="d-block w-100 rounded-lg"
+                        alt="Fantast_6 логотип"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="files/images/fantast_6/фото1.jpg"
+                        class="d-block w-100 rounded-lg"
+                        alt="Фото 1"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="files/images/fantast_6/фото2.jpg"
+                        class="d-block w-100 rounded-lg"
+                        alt="Фото 2"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#teamCarousel"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#teamCarousel"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+              <p
+                class="text-[#141414] text-base font-normal leading-normal pb-3 pt-1 px-4"
+              >
+                Мы очень дружные и веселые! Стремимся к вершинам, постигаем
+                новое и усердно работаем.А также мы фантастически круты! Мы
+                появились недавно, но уверен, что достигнем многого.
+              </p>
+              <h2
+                class="text-[#141414] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5"
+              >
+                Достижения
+              </h2>
+              <div class="grid grid-cols-[40px_1fr] gap-x-2 px-4">
+                <div class="flex flex-col items-center gap-1 pt-3">
+                  <div
+                    class="text-[#141414]"
+                    data-icon="Trophy"
+                    data-size="24px"
+                    data-weight="regular"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24px"
+                      height="24px"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M232,64H208V56a16,16,0,0,0-16-16H64A16,16,0,0,0,48,56v8H24A16,16,0,0,0,8,80V96a40,40,0,0,0,40,40h3.65A80.13,80.13,0,0,0,120,191.61V216H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V191.58c31.94-3.23,58.44-25.64,68.08-55.58H208a40,40,0,0,0,40-40V80A16,16,0,0,0,232,64ZM48,120A24,24,0,0,1,24,96V80H48v32q0,4,.39,8Zm144-8.9c0,35.52-28.49,64.64-63.51,64.9H128a64,64,0,0,1-64-64V56H192ZM232,96a24,24,0,0,1-24,24h-.5a81.81,81.81,0,0,0,.5-8.9V80h24Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="w-[1.5px] bg-[#e0e0e0] h-2 grow"></div>
+                </div>
+                <div class="flex flex-1 flex-col py-3">
+                  <p
+                    class="text-[#141414] text-base font-medium leading-normal"
+                  >
+                    Robot design 2 place(FLL)
+                  </p>
+                  <p
+                    class="text-[#757575] text-base font-normal leading-normal"
+                  >
+                    10.05.2025
+                  </p>
+                </div>
+                <div class="flex flex-col items-center gap-1 pb-3">
+                  <div class="w-[1.5px] bg-[#e0e0e0] h-2"></div>
+                  <div
+                    class="text-[#141414]"
+                    data-icon="Check"
+                    data-size="24px"
+                    data-weight="regular"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24px"
+                      height="24px"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="flex flex-1 flex-col py-3">
+                  <p
+                    class="text-[#141414] text-base font-medium leading-normal"
+                  >
+                    Участие на WRO
+                  </p>
+                  <p
+                    class="text-[#757575] text-base font-normal leading-normal"
+                  >
+                    25.04.2025
+                  </p>
+                </div>
+              </div>
+              <div class="flex px-4 py-3 justify-center">
+                <a
+                  href="https://forms.gle/is9UWSGziD5KKrTE9"
+                  target="_blank"
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-[#141414] text-white text-base font-bold leading-normal tracking-[0.015em]"
+                >
+                  <span class="truncate">Присоединиться</span>
+                </a>
+              </div>
+              <p
+                class="text-[#757575] text-sm font-normal leading-normal pb-3 pt-1 px-4 text-center"
+              >
+                Хотите помочь в развитии команды? Присоединяйтесь к нам.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Инициализация Carousel
+      document.addEventListener("DOMContentLoaded", function () {
+        var myCarousel = document.getElementById("teamCarousel");
+        var carousel = new bootstrap.Carousel(myCarousel, {
+          interval: 3000,
+          wrap: true,
+          pause: "hover",
+        });
+      });
+    </script>
+  </body>
+</html>

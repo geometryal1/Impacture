@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <title>Impacture - Инженерная платформа</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700;900&display=swap">
+    <link rel="stylesheet" href="files/styles/home.css">
+    <link rel="stylesheet" href="files/styles/mobile.css">
+    <link rel="stylesheet" href="files/styles/desktop.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style>
+        /* Мобильная навигация */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: white;
+            z-index: 1000;
+            padding: 2rem;
+            overflow-y: auto;
+        }
+
+        .mobile-nav.active {
+            display: block;
+        }
+
+        .mobile-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-nav li {
+            margin-bottom: 1.5rem;
+        }
+
+        .mobile-nav a {
+            display: block;
+            padding: 0.75rem 0;
+            color: #141414;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-radius: 0.5rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .mobile-nav a:hover {
+            background-color: #f5f5f5;
+        }
+
+        .mobile-nav a.button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #141414;
+            color: white;
+            border-radius: 0.75rem;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        /* Адаптивные стили */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+                line-height: 1.2;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+                line-height: 1.5;
+            }
+
+            .button-group {
+                flex-direction: column;
+                gap: 1.5rem;
+                width: 100%;
+            }
+
+            .button-group a {
+                width: 100%;
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .section-text {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+
+            .how-it-works {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                padding: 1rem;
+            }
+
+            .step {
+                text-align: center;
+                padding: 1rem;
+            }
+
+            .step-icon {
+                font-size: 2rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .step-content p {
+                font-size: 1.1rem;
+            }
+
+            header {
+                padding: 0.5rem 1rem;
+            }
+
+            .layout-container {
+                padding: 0 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .mobile-nav a {
+                font-size: 1rem;
+            }
+
+            .mobile-nav a.button {
+                padding: 0.875rem 1.5rem;
+            }
+        }
+    </style>
+    </style>
+</head>
+<body class="home-container">
+    <div class="relative min-h-screen bg-white">
+        <!-- Навигационная панель -->
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f2f2f2] px-10 py-3">
+            <div class="flex items-center gap-8">
+                <div class="flex items-center gap-4 text-[#141414]">
+                    <div class="size-4">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-[#141414] text-lg font-bold leading-tight tracking-[-0.015em]">Impacture</h2>
+                </div>
+                <div class="flex items-center gap-9">
+                    <a class="text-[#141414] text-sm font-medium leading-normal active hidden md:block" href="index.html">Главная</a>
+                    <a class="text-[#141414] text-sm font-medium leading-normal hidden md:block" href="student-page.html">Команды</a>
+                </div>
+                <button class="mobile-menu-btn">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 6h18M3 12h18M3 18h18" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="flex items-center gap-8">
+                <div class="mobile-nav">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="student-page.html">Команды</a></li>
+                        <li><a href="student-page.html" class="button">Найти команду</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="flex-1">
+            <div class="layout-container">
+                <div class="py-5">
+                    <div class="layout-content-container">
+                        <!-- Герой-секция -->
+                        <section class="hero-section">
+                            <div class="hero-content">
+                                <h1 class="hero-title">Создай своё инженерное будущее</h1>
+                                <p class="hero-subtitle">Impacture помогает школьникам вступить в реальные инженерные команды и проекты.</p>
+                                <div class="button-group">
+                                    <a href="student-page.html" class="button button-primary">Найти команду</a>
+                                    <a href="#" class="button button-secondary">Присоединиться</a>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- О проекте -->
+                        <section class="section">
+                            <h2 class="section-title">О проекте Impacture</h2>
+                            <p class="section-text">
+                                Наша миссия - дать возможность школьникам участвовать в реальных инженерных проектах и командах, способствуя инновациям и сотрудничеству.
+                            </p>
+                        </section>
+
+                        <!-- Как это работает -->
+                        <section class="section">
+                            <h2 class="section-title">Как это работает</h2>
+                            <div class="how-it-works">
+                                <!-- Шаг 1 -->
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-icon">
+                                        <i class="bi bi-person"></i>
+                                    </div>
+                                    <div class="step-content">
+                                        <h3>Зарегистрируйся</h3>
+                                        <p>Создай свой профиль и расскажи о своих навыках</p>
+                                    </div>
+                                </div>
+
+                                <!-- Шаг 2 -->
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-icon">
+                                        <i class="bi bi-people"></i>
+                                    </div>
+                                    <div class="step-content">
+                                        <h3>Вступи в команду</h3>
+                                        <p>Выбери подходящую команду и присоединяйся к проекту</p>
+                                    </div>
+                                </div>
+
+                                <!-- Шаг 3 -->
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-icon">
+                                        <i class="bi bi-briefcase"></i>
+                                    </div>
+                                    <div class="step-content">
+                                        <h3>Решай реальные задачи</h3>
+                                        <p>Работай над реальными проектами и развивай навыки</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Поддержка проекта -->
+                        <!-- <section class="section">
+                            <h2 class="section-title">Поддержать проект</h2>
+                            <p class="section-text">
+                                Помогите нам создавать возможности для будущих инженеров. Ваша поддержка имеет значение.
+                            </p>
+                            <div class="flex justify-center py-3">
+                                <a href="#" class="button button-primary">Поддержать</a>
+                            </div>
+                        </section> -->
+
+                        <!-- Подвал -->
+                        <footer class="footer">
+
+                            <p class="copyright"> 2025 Impacture. Все права защищены.</p>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="files/scripts/mobile-nav.js"></script>
+</body>
+</html>
